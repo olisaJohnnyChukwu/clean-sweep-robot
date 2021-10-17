@@ -104,13 +104,14 @@ public class Main {
 		
 	
 		
-		Queue<Integer> queue=graph.dfs(graph, 0);
+		Point startPoint=cleaner.getPoint();
+		int cellNumber=(startPoint.y*10)+startPoint.x;
+	
+		
+		Queue<Integer> queue=graph.dfs(graph, cellNumber);
 		
 		
-		queue.stream().forEach(q->{
-			System.out.println(q);
-		});
-		 
+		cleaner.move(queue);
 		 
 		
 		
