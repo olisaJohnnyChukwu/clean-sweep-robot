@@ -51,12 +51,12 @@ public final class Logging {
 	}
 
 	public static void logMovement(Tile t) {
-		String message = "Current location at tile: " + t.getX() + ", " + t.getX();
+		String message = "Current location at tile: " + t.getTileType() + ", " + t.getTileType();
 		writeToFile(Filename, message);
 	}
 
 	public static void logPath(Tile t) {
-		String message = "Shortest Path: " + t.getX() + ", " + t.getX();
+		String message = "Shortest Path: " + t.getTileType() + ", " + t.getTileType();
 		writeToFile(Filename, message);
 	}
 
