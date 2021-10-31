@@ -1,3 +1,5 @@
+package logging;
+
 import java.io.*;
 import java.util.Calendar;
 import java.util.Iterator;
