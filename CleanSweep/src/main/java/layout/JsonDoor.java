@@ -4,6 +4,7 @@ import java.awt.Point;
 
 public class JsonDoor {
 	Point point1;
+	boolean open;
 	
 	
 	
@@ -21,6 +22,18 @@ public class JsonDoor {
 
 	public void setPoint1(Point point1) {
 		this.point1 = point1;
+	}
+
+
+
+	public boolean isOpen() {
+		return open;
+	}
+
+
+
+	public void setOpen(boolean open) {
+		this.open = open;
 	}
 	
 	

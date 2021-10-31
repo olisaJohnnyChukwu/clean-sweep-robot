@@ -2,6 +2,7 @@ package element;
 
 public class Tile implements Element {
 	TileType TileType;
+	boolean clean=true;
 	
 	
 	public boolean passable() {
@@ -21,6 +22,20 @@ public class Tile implements Element {
 	public void setTileType(TileType tileType) {
 		TileType = tileType;
 	}
+	
+	public void cleanFloor() {
+		clean=true;
+	}
+	
+	public  void DirtyFloor() {
+		clean=false;
+	}
+
+	public boolean isClean() {
+		return clean;
+	}
+	
+	
 	
 	
 	

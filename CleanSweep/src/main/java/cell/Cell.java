@@ -34,6 +34,9 @@ public class Cell {
 		this.point = point;
 	}
 	
+	public String getCellType() {
+		return element.printElement();
+	}
 	
 	public boolean passable() {
 		return element.passable();

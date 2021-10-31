@@ -10,12 +10,15 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintStream;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Queue;
 
 import com.google.gson.Gson;
 
 import cell.Cell;
+import element.ChargingStation;
 import element.Door;
 import element.Element;
 import element.Stairs;
@@ -23,9 +26,11 @@ import element.Tile;
 import element.TileType;
 import element.Wall;
 import graph.Graph;
+import layout.JsonChargingPoint;
 import layout.JsonDoor;
 import layout.JsonLayout;
 import layout.JsonStair;
+import layout.JsonTile;
 import layout.JsonWall;
 import layout.Layout;
 import robot.Cleaner;
@@ -60,9 +65,11 @@ public class Main {
 		populateFloor(cell);//tile all the grids
 		
 		layout.setCells(cell);//add the cells to the layout
+		
 		Cleaner cleaner=new Cleaner();//start robot
 		
 		cleaner.setPoint(jsonLayout.getStartingPoint());//set the starting point
+		
 		
 		
 		cleaner.setLayout(layout);//cleaner accepts the floor plans
@@ -70,6 +77,8 @@ public class Main {
 		buildWalls(jsonLayout,layout);//set up walls
 		setupDoors(jsonLayout,layout);//set up doors
 		setupStairs(jsonLayout,layout);//set up stairs
+		TileFloor(jsonLayout,layout);
+		setChargingPoints(jsonLayout,layout, cleaner);//
 		
 		
 		Graph graph=new Graph();
@@ -78,6 +87,138 @@ public class Main {
 			
 		
 		
+		
+		
+		
+		addEdge(graph,path);//add connected vertexes to graph
+		
+		Point startPoint=cleaner.getPoint();
+		int cellNumber=(startPoint.y*10)+startPoint.x;
+	
+		
+		
+		
+		
+		cleaner.move(graph,cellNumber);
+		
+		
+		
+		
+
+	}
+	
+	
+	public static void populateFloor(Cell[][] cell) {
+		
+		int x=0;
+		for(int i=0;i<cell.length;i++) {
+			for(int j=0;j<cell.length;j++) {
+				cell[i][j]=new Cell();
+				cell[i][j].setPoint(new Point(i,j));
+				if(cell[i][j]!=null) {
+					Tile tile =new Tile();
+					int random=getRandomNumber(1,2);
+					if(random==1) {
+						tile.DirtyFloor();
+						
+					}
+					
+					tile.setTileType(TileType.Barefloor);
+					cell[i][j].setElement(tile);
+					cell[i][j].setNumber(x);
+					x=x+1;
+				}
+				
+				
+				
+			}
+		}
+	}
+	
+	
+	public static int getRandomNumber(int min, int max) {
+	    return (int) ((Math.random() * (max - min)) + min);
+	}
+	public static void buildWalls(JsonLayout jsonLayout,Layout layout) {
+		Cell[][] cell =layout.getCells();
+		List<JsonWall> walls=jsonLayout.getWalls();
+		
+		
+		for(int j=0;j<walls.size();j++) {
+			JsonWall JsonWall=walls.get(j);
+			Point point1=JsonWall.getPoint1();
+			Point point2=JsonWall.getPoint2();
+			Point point3=JsonWall.getPoint3();
+			
+			List<Integer> maxValues=max(point1,point2,point3);
+			List<Integer> minValues=min(point1,point2,point3);
+			
+			
+			int xMax=maxValues.get(0);
+			int xMin=minValues.get(0);
+			
+			int yMax=maxValues.get(1);
+			int yMin=minValues.get(1);
+			
+			
+			
+				for(int x=xMin; x<=xMax;x++) {
+					cell[x][yMax].setElement(new Wall());
+				}
+				
+				for(int y=yMin; y<=yMax;y++) {
+					cell[xMax][y].setElement(new Wall());
+				}
+				
+				
+				
+		}
+		
+		
+		
+		
+		
+	}
+	
+	
+	public static void setupDoors(JsonLayout jsonLayout,Layout layout) {
+		Cell[][] cell =layout.getCells();
+		List<JsonDoor> doors=jsonLayout.getDoor();
+		
+		
+		for(int j=0;j< doors.size();j++) {
+			JsonDoor jsonDoor=doors.get(j);
+			Point point=jsonDoor.getPoint1();
+			Door door =new Door();
+			if(jsonDoor.isOpen()) {
+				door.openDoor();
+			}
+			cell[point.x][point.y].setElement(door);
+			
+		}
+		
+		
+	}
+	
+	
+	public static void setupStairs(JsonLayout jsonLayout,Layout layout) {
+		Cell[][] cell =layout.getCells();
+		List<JsonStair> stair=jsonLayout.getStair();
+		
+		
+		for(int j=0;j< stair.size();j++) {
+			JsonStair jsonStair =stair.get(j);
+			Point point=jsonStair.getPoint();
+			cell[point.x][point.y].setElement(new Stairs());
+		
+		}
+		
+		
+		
+	}
+	
+	
+	public static void addEdge(Graph graph,boolean[][] path) {
 		for(int i=0;i<path.length;i++) {
 			for(int j=0;j<path.length;j++) {
 				if(path[i][j]) {
@@ -97,131 +238,132 @@ public class Main {
 			
 		}
 		
-		 
-
-		
-		
-		
-	
-		
-		Point startPoint=cleaner.getPoint();
-		int cellNumber=(startPoint.y*10)+startPoint.x;
-	
-		
-		Queue<Integer> queue=graph.dfs(graph, cellNumber);
-		
-		
-		cleaner.move(queue);
-		 
-		
-		
-		
-
 	}
 	
 	
-	public static void populateFloor(Cell[][] cell) {
+	public static ArrayList<Integer> max(Point point1,Point point2,Point point3) {
+			
+		ArrayList<Integer> x=new ArrayList<>();
+		x.add(point1.x);
+		x.add(point2.x);
+		x.add(point3.x);
 		
-		int x=0;
-		for(int i=0;i<cell.length;i++) {
-			for(int j=0;j<cell.length;j++) {
-				cell[i][j]=new Cell();
-				cell[i][j].setPoint(new Point(i,j));
-				if(cell[i][j]!=null) {
+		ArrayList<Integer> y=new ArrayList<>();
+		y.add(point1.y);
+		y.add(point2.y);
+		y.add(point3.y);
+		
+		int maxX=x.get(0);
+		for(int i:x) {
+			if(maxX<i) {
+				maxX=i;
+			}
+		}
+		
+		int maxY=y.get(0);
+		for(int i:y) {
+			if(maxY<i) {
+				maxY=i;
+			}
+		}
+		
+		ArrayList<Integer>list=new ArrayList<>();
+		list.add(maxX);
+		list.add(maxY);
+		
+		return list;
+		
+	}
+	
+	
+	public static ArrayList<Integer>  min(Point point1,Point point2,Point point3) {
+		
+		ArrayList<Integer> x=new ArrayList<>();
+		x.add(point1.x);
+		x.add(point2.x);
+		x.add(point3.x);
+		
+		ArrayList<Integer> y=new ArrayList<>();
+		y.add(point1.y);
+		y.add(point2.y);
+		y.add(point3.y);
+		
+		int minX=x.get(0);
+		for(int i:x) {
+			if(minX>i) {
+				minX=i;
+			}
+		}
+		
+		int minY=y.get(0);
+		for(int i:y) {
+			if(minY>i) {
+				minY=i;
+			}
+		}
+		
+		ArrayList<Integer>list=new ArrayList<>();
+		list.add(minX);
+		list.add(minY);
+		
+		return list;
+
+		
+	}
+	
+	public static void TileFloor(JsonLayout jsonLayout,Layout layout) {
+		
+		List<JsonTile> jsonTiles=jsonLayout.getTile();
+		Cell[][] cell =layout.getCells();
+		for(JsonTile t:jsonTiles) {
+			Point point1=t.getPoint1();
+			Point point2=t.getPoint2();
+			Point point3=t.getPoint3();
+			
+			List<Integer> maxValues=max(point1,point2,point3);
+			List<Integer> minValues=min(point1,point2,point3);
+			
+			int xMax=maxValues.get(0);
+			int xMin=minValues.get(0);
+			
+			int yMax=maxValues.get(1);
+			int yMin=minValues.get(1);
+			
+			TileType tileType=t.getTileType();
+			
+			for(int x=xMin;x<xMax;x++) {
+				for(int y=yMin;y<yMax;y++) {
 					Tile tile =new Tile();
-					tile.setTileType(TileType.Barefloor);
-					cell[i][j].setElement(new Tile());
-					cell[i][j].setNumber(x);
-					x=x+1;
+					tile.setTileType(tileType);
+					cell[x][y].setElement(tile);
+					
+					
 				}
-				
-				
-				
 			}
+			
+			
 		}
-	}
-	
-	
-	public static void buildWalls(JsonLayout jsonLayout,Layout layout) {
-		Cell[][] cell =layout.getCells();
-		List<JsonWall> walls=jsonLayout.getWalls();
-		
-		
-		for(int j=0;j<walls.size();j++) {
-			JsonWall JsonWall=walls.get(j);
-			Point point1=JsonWall.getPoint1();
-			Point point2=JsonWall.getPoint2();
-			Point point3=JsonWall.getPoint3();
-			
-			if(point1.x==point2.x && point1.y<point2.y) {
-				for(int i=point1.y;i<=point2.y;i++) {
-					cell[point2.x][i].setElement(new Wall());
-				}
-			}
-			
-			if(point2.x>point3.x && point2.y==point3.y) {
-				for(int i=point3.x;i<=point2.x;i++) {
-					cell[i][point2.y].setElement(new Wall());
-				}
-			}
-			
-			
-			if(point2.x<point3.x && point2.y==point3.y) {
-				for(int i=point2.x;i<=point3.x;i++) {
-					cell[i][point2.y].setElement(new Wall());
-				}
-			}
-			
-			if(point1.x<point2.x && point1.y==point2.y) {
-				for(int i=point1.x;i<=point2.x;i++) {
-					cell[i][point1.y].setElement(new Wall());
-				}
-			}
-			
-			
-			if(point2.x==point3.x && point2.y<point3.y) {
-				for(int i=point1.y;i<=point2.y;i++) {
-					cell[point2.x][i].setElement(new Wall());
-				}
-			}
-		}
-		
-		
-		
-		
 		
 	}
 	
 	
-	public static void setupDoors(JsonLayout jsonLayout,Layout layout) {
-		Cell[][] cell =layout.getCells();
-		List<JsonDoor> doors=jsonLayout.getDoor();
-		
-		for(int j=0;j< doors.size();j++) {
-			JsonDoor jsonDoor=doors.get(j);
-			Point point=jsonDoor.getPoint1();
-			Door door =new Door();
-			//door.openDoor();
-			cell[point.x][point.y].setElement(door);
-		
+	public static void setChargingPoints(JsonLayout jsonLayout,Layout layout,Cleaner cleaner) {
+		List<JsonChargingPoint> chargingStation=jsonLayout.getChargingPoint();
+		HashSet<Integer> chargingPoints=new HashSet<>();
+		for(JsonChargingPoint i:chargingStation) {
+			Cell[][] cell =layout.getCells();
+			int x=i.getPoint().x;
+			int y=i.getPoint().y;
+			
+			//int cellnumber=(10*y)+x;
+			
+			cell[x][y].setElement(new ChargingStation());
+			chargingPoints.add((10*y)+x);
+			
+			
 		}
 		
-		
-	}
-	
-	
-	public static void setupStairs(JsonLayout jsonLayout,Layout layout) {
-		Cell[][] cell =layout.getCells();
-		List<JsonStair> stair=jsonLayout.getStair();
-		
-		for(int j=0;j< stair.size();j++) {
-			JsonStair jsonStair =stair.get(j);
-			Point point=jsonStair.getPoint();
-			cell[point.x][point.y].setElement(new Stairs());
-		
-		}
-		
-		
+		cleaner.setChargingpoints(chargingPoints);
 	}
 
 }
