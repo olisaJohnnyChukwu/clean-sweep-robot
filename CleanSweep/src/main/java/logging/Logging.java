@@ -85,7 +85,21 @@ public final class Logging {
 		}
 	}
 
+	
+	
+	public static void logInternalMap(Map<Integer, Tile> m) {
+		StringBuilder sb = new StringBuilder();
+		Iterator<Map.Entry<Integer, Tile>> it = m.entrySet().iterator();
+		while (it.hasNext()) {
+			Tile t = it.next().getValue();
+			sb.append("Tile: x=").append(t.getTileType()).append(" y=").append(t.getTileType());
+			sb.append(" ss=").append(t.getTileType()).append(" ds=").append(t.getTileType()).append("\n");
+		}
+		writeToFile("afterCleaning.txt", sb.toString());
+	}
 
+	
+	
 	private static void writeToFile(String fileName, String message) {
 		FileWriter fw;
 		BufferedWriter bw = null;
