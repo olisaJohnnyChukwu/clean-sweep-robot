@@ -1,3 +1,5 @@
+package battery;
+
 public class BatteryPercentage {
 	private double CurrentBatteryPercentage;
 	private double LowBatteryPercentage = 15;
