@@ -1,4 +1,4 @@
-package element;
+package CleanSweep.src.main.java.element;
 
 public class Tile implements Element {
 	TileType TileType;

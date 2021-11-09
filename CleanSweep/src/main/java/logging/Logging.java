@@ -1,12 +1,12 @@
-package logging;
+package CleanSweep.src.main.java.logging;
+
+import CleanSweep.src.main.java.element.Tile;
 
 import java.io.*;
 import java.util.Calendar;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-
-import element.Tile;
 
 public final class Logging {
 	private Logging() {

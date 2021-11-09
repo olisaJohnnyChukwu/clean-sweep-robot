@@ -1,6 +1,6 @@
-package element;
+package CleanSweep.src.main.java.element;
 
-import robot.Cleaner;
+import CleanSweep.src.main.java.robot.Cleaner;
 
 public class ChargingStation implements Element{
 	

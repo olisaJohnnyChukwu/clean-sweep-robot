@@ -1,4 +1,4 @@
-package robot;
+package CleanSweep.src.main.java.robot;
 
 import java.awt.Point;
 import java.util.ArrayList;
@@ -7,12 +7,12 @@ import java.util.List;
 import java.util.Queue;
 import java.util.Stack;
 
-import cell.Cell;
-import element.ChargingStation;
-import element.Tile;
-import element.TileType;
-import graph.Graph;
-import layout.Layout;
+import CleanSweep.src.main.java.cell.Cell;
+import CleanSweep.src.main.java.element.ChargingStation;
+import CleanSweep.src.main.java.element.Tile;
+import CleanSweep.src.main.java.element.TileType;
+import CleanSweep.src.main.java.graph.Graph;
+import CleanSweep.src.main.java.layout.Layout;
 
 public class Cleaner {
 	Layout layout;

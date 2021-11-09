@@ -1,4 +1,4 @@
-package element;
+package CleanSweep.src.main.java.element;
 
 public class Stairs implements Element {
 

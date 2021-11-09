@@ -1,10 +1,10 @@
-package cell;
+package CleanSweep.src.main.java.cell;
+
+import CleanSweep.src.main.java.element.Element;
+import CleanSweep.src.main.java.element.TileType;
+import CleanSweep.src.main.java.element.Tile;
 
 import java.awt.Point;
-
-import element.Element;
-import element.Tile;
-import element.TileType;
 
 public class Cell {
 	public Element element;

@@ -1,4 +1,4 @@
-package layout;
+package CleanSweep.src.main.java.layout;
 
 import java.awt.Point;
 

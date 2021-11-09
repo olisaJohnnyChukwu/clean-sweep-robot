@@ -1,4 +1,4 @@
-package battery;
+package CleanSweep.src.main.java.battery;
 
 public class BatteryPercentage {
 	private double CurrentBatteryPercentage;
