@@ -1,6 +1,6 @@
-package CleanSweep.src.main.java.element;
+package element;
 
-import CleanSweep.src.main.java.robot.Cleaner;
+import robot.Cleaner;
 
 public class ChargingStation implements Element{
 	
@@ -27,5 +27,14 @@ public class ChargingStation implements Element{
 		System.out.println("........");
 		System.out.println("........");
 	}
+
+	@Override
+	public boolean cleanable() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	
+	
+	
 	
 }

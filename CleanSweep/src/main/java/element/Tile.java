@@ -1,4 +1,4 @@
-package CleanSweep.src.main.java.element;
+package element;
 
 public class Tile implements Element {
 	TileType TileType;
@@ -33,6 +33,12 @@ public class Tile implements Element {
 
 	public boolean isClean() {
 		return clean;
+	}
+
+	@Override
+	public boolean cleanable() {
+		// TODO Auto-generated method stub
+		return true;
 	}
 	
 	

@@ -1,6 +1,6 @@
-package CleanSweep.src.main.java.layout;
+package layout;
 
-import CleanSweep.src.main.java.cell.Cell;
+import cell.Cell;
 
 public class Layout {
 	public Cell cells[][];

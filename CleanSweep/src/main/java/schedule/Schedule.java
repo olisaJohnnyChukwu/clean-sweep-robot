@@ -1,4 +1,4 @@
-package CleanSweep.src.main.java.schedule;
+package schedule;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileReader;

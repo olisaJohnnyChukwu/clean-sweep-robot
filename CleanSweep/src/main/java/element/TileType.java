@@ -1,4 +1,4 @@
-package CleanSweep.src.main.java.element;
+package element;
 
 public enum TileType {
 	 Barefloor,

@@ -1,4 +1,4 @@
-package CleanSweep.src.main.java.element;
+package element;
 
 public class Wall implements Element {
 
@@ -10,6 +10,12 @@ public class Wall implements Element {
 	public String printElement() {
 		// TODO Auto-generated method stub
 		return "Wall";
+	}
+
+	@Override
+	public boolean cleanable() {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }

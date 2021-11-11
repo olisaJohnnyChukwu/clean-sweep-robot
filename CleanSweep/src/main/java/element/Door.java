@@ -1,4 +1,4 @@
-package CleanSweep.src.main.java.element;
+package element;
 
 public class Door implements Element{
 	
@@ -24,6 +24,14 @@ public class Door implements Element{
 		// TODO Auto-generated method stub
 		open=!open;
 		
+	}
+
+
+
+	@Override
+	public boolean cleanable() {
+		// TODO Auto-generated method stub
+		return false;
 	}
 	
 	

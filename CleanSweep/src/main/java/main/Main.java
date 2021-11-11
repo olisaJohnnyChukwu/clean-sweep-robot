@@ -1,4 +1,4 @@
-package CleanSweep.src.main.java.main;
+package main;
 
 import java.awt.Point;
 import java.io.BufferedReader;
@@ -15,27 +15,25 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Queue;
 
-import CleanSweep.src.main.java.cell.Cell;
-import CleanSweep.src.main.java.element.Tile;
-import CleanSweep.src.main.java.layout.JsonChargingPoint;
 import com.google.gson.Gson;
 
-import CleanSweep.src.main.java.cell.Cell;
-import CleanSweep.src.main.java.element.ChargingStation;
-import CleanSweep.src.main.java.element.Door;
-import CleanSweep.src.main.java.element.Element;
-import CleanSweep.src.main.java.element.Stairs;
-import CleanSweep.src.main.java.element.Tile;
-import CleanSweep.src.main.java.element.TileType;
-import CleanSweep.src.main.java.element.Wall;
-import CleanSweep.src.main.java.graph.Graph;
-import CleanSweep.src.main.java.layout.JsonDoor;
-import CleanSweep.src.main.java.layout.JsonLayout;
-import CleanSweep.src.main.java.layout.JsonStair;
-import CleanSweep.src.main.java.layout.JsonTile;
-import CleanSweep.src.main.java.layout.JsonWall;
-import CleanSweep.src.main.java.layout.Layout;
-import CleanSweep.src.main.java.robot.Cleaner;
+import cell.Cell;
+import element.ChargingStation;
+import element.Door;
+import element.Element;
+import element.Stairs;
+import element.Tile;
+import element.TileType;
+import element.Wall;
+import graph.Graph;
+import layout.JsonChargingPoint;
+import layout.JsonDoor;
+import layout.JsonLayout;
+import layout.JsonStair;
+import layout.JsonTile;
+import layout.JsonWall;
+import layout.Layout;
+import robot.Cleaner;
 
 public class Main {
 
@@ -43,7 +41,7 @@ public class Main {
 		// TODO Auto-generated method stub
 		
 		//load layout files from json
-		FileInputStream fileInputStream= new FileInputStream(new File("CleanSweep/layoutElements.json"));
+		FileInputStream fileInputStream= new FileInputStream(new File("layoutElements.json"));
 		BufferedReader bufferedReader =new BufferedReader (new InputStreamReader(fileInputStream));
 		
 		
@@ -55,6 +53,8 @@ public class Main {
 		while((fromInput=bufferedReader.readLine())!=null) {
 			json+=fromInput +"\n";
 		}
+		
+		
 		
 		
 		System.out.println(json);
@@ -74,12 +74,16 @@ public class Main {
 		
 		
 		
+		
 		cleaner.setLayout(layout);//cleaner accepts the floor plans
 		
 		buildWalls(jsonLayout,layout);//set up walls
 		setupDoors(jsonLayout,layout);//set up doors
 		setupStairs(jsonLayout,layout);//set up stairs
 		TileFloor(jsonLayout,layout);
+		
+		
+		
 		setChargingPoints(jsonLayout,layout, cleaner);//
 		
 		

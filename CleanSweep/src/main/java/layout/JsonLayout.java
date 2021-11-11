@@ -1,4 +1,4 @@
-package CleanSweep.src.main.java.layout;
+package layout;
 
 import java.awt.Point;
 import java.io.File;
@@ -9,12 +9,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-import CleanSweep.src.main.java.element.TileType;
-import CleanSweep.src.main.java.layout.JsonWall;
+import element.TileType;
 
 public class JsonLayout {
 	List<JsonWall> walls=new ArrayList<JsonWall>();

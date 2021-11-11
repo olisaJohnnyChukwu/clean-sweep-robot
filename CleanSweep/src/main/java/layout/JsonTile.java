@@ -1,7 +1,7 @@
-package CleanSweep.src.main.java.layout;
+package layout;
 import java.awt.Point;
 
-import CleanSweep.src.main.java.element.*;
+import element.*;
 
 public class JsonTile {
 	TileType  TileType ;

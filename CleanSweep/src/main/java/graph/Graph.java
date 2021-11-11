@@ -1,4 +1,4 @@
-package CleanSweep.src.main.java.graph;
+package graph;
 
 import java.util.*;
 

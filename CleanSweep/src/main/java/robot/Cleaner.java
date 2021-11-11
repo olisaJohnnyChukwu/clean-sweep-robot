@@ -1,4 +1,4 @@
-package CleanSweep.src.main.java.robot;
+package robot;
 
 import java.awt.Point;
 import java.util.ArrayList;
@@ -7,12 +7,12 @@ import java.util.List;
 import java.util.Queue;
 import java.util.Stack;
 
-import CleanSweep.src.main.java.cell.Cell;
-import CleanSweep.src.main.java.element.ChargingStation;
-import CleanSweep.src.main.java.element.Tile;
-import CleanSweep.src.main.java.element.TileType;
-import CleanSweep.src.main.java.graph.Graph;
-import CleanSweep.src.main.java.layout.Layout;
+import cell.Cell;
+import element.ChargingStation;
+import element.Tile;
+import element.TileType;
+import graph.Graph;
+import layout.Layout;
 
 public class Cleaner {
 	Layout layout;
@@ -85,6 +85,7 @@ public class Cleaner {
 				
 				if(power>90) {//check if the cleaner power is more than 50 units
 					if(cell.getCellType().equals("Tile")) {
+						
 						System.out.println(cell.getTileType());//print the cell type
 						energy(cell.getTileType());//for tiles determine the energy units required and deduct
 						Tile tile =(Tile)cell.getElement();
@@ -121,6 +122,7 @@ public class Cleaner {
 						Cell cell=cells[(curr%10)][curr/10];
 						setPoint(curr);//set the current position
 						System.out.println(getPosition()+" "+curr);
+						
 						if(cell.getCellType().equals("Tile")) {
 							System.out.println(cell.getTileType());
 							energy(cell.getTileType());
