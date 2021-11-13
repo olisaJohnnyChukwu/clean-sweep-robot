@@ -11,7 +11,7 @@ import java.util.Map;
 import element.Tile;
 
 public final class Logging {
-	private Logging() {
+	public Logging() {
 	}
 
 	private static final String Filename = "log.txt";
