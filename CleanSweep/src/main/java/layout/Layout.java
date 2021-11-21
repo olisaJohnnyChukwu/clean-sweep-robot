@@ -28,6 +28,20 @@ public class Layout {
 		
 	}
 	
+	public String [][] passAble(){
+		
+		String[][] matrix=new String[10][10]; 
+		
+		for(int i=0;i<cells.length;i++) {
+			for(int j=0;j<cells.length;j++) {
+				matrix[i][j]=cells[i][j].getNumber()+" " +cells[i][j].getCellType();
+				
+				
+			}
+		}
+		return matrix;
+		
+	}
 	
 	public Cell cell(int cellNumber) {
 		

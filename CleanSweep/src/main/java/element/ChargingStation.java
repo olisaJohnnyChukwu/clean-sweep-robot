@@ -1,5 +1,7 @@
 package element;
 
+import java.io.PrintStream;
+
 import robot.Cleaner;
 
 public class ChargingStation implements Element{
@@ -19,22 +21,18 @@ public class ChargingStation implements Element{
 	}
 	
 	
-	public void rechargeElement(Cleaner cleaner) {
+	public void rechargeElement(Cleaner cleaner,String log) {
+		log+="Cleaner Charging....."+"\n";
 		System.out.println("Cleaner Charging.....");
 		cleaner.setPower(250);
+		log+="Cleaner Recharged"+"\n";
 		System.out.println("Cleaner Recharged");
 		System.out.println("........");
 		System.out.println("........");
 		System.out.println("........");
+		log+="......"+"\n";
+		
+		
 	}
-
-	@Override
-	public boolean cleanable() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-	
-	
-	
 	
 }

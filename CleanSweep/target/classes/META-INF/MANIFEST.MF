@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Built-By: olisajohnnychukwu
+Build-Jdk: 16.0.1
+Class-Path: json-20210307.jar
+Main-Class: main.App
+Created-By: Maven Integration for Eclipse
+

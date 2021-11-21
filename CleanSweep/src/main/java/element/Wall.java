@@ -12,10 +12,4 @@ public class Wall implements Element {
 		return "Wall";
 	}
 
-	@Override
-	public boolean cleanable() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
 }

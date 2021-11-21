@@ -12,10 +12,4 @@ public class Stairs implements Element {
 		return "Stairs";
 	}
 
-	@Override
-	public boolean cleanable() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
 }

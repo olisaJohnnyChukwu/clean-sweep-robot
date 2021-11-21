@@ -4,13 +4,28 @@ import java.awt.Point;
 
 public class JsonWall {
 	Point point1;
-	
 	Point point2;
-	
 	Point point3;
+	Point point4;
 	
 	
 	
+	
+	
+	
+	
+	
+	
+
+	public JsonWall(Point point1, Point point2, Point point3, Point point4) {
+		super();
+		this.point1 = point1;
+		this.point2 = point2;
+		this.point3 = point3;
+		this.point4 = point4;
+	}
+
+
 
 	public JsonWall() {
 		
@@ -19,12 +34,7 @@ public class JsonWall {
 
 
 
-	public JsonWall(Point point1, Point point2, Point point3) {
-		super();
-		this.point1 = point1;
-		this.point2 = point2;
-		this.point3 = point3;
-	}
+	
 
 
 
@@ -62,4 +72,20 @@ public class JsonWall {
 		this.point3 = point3;
 	}
 
+
+
+	public Point getPoint4() {
+		return point4;
+	}
+
+
+
+	public void setPoint4(Point point4) {
+		this.point4 = point4;
+	}
+
+	
+
+
+	
 }

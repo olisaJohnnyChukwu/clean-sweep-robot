@@ -1,6 +1,7 @@
 package robot;
 
 import java.awt.Point;
+import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -21,10 +22,11 @@ public class Cleaner {
 	Integer power=250;
 	HashSet<Integer> chargingpoints;
 	
+	String log;
 	
 	
-	public Cleaner() {
-		
+	public Cleaner(String log) {
+		this.log=log;
 		visited =new boolean[10][10];
 		
 		for(int i=0;i<visited.length;i++) {
@@ -37,6 +39,16 @@ public class Cleaner {
 	}
 	
 	
+	public String getLog() {
+		return log;
+	}
+
+
+	public void setLog(String log) {
+		this.log = log;
+	}
+
+
 	public Point getPoint() {
 		return point;
 	}
@@ -67,6 +79,7 @@ public class Cleaner {
 		
 		point.move(x, y);
 		System.out.println(getPosition()+" "+prev);
+		//printStream.println(getPosition()+" "+prev);
 		
 		/*
 		 * in this loop the cleaner is going to traverse  through the valid paths by popping them of the queue.
@@ -78,6 +91,7 @@ public class Cleaner {
 				 
 				setPoint(curr);//set the current  position of the cleaner
 				System.out.println(getPosition()+" "+curr);
+				//printStream.println(getPosition()+" "+curr);
 				
 				
 				
@@ -85,8 +99,9 @@ public class Cleaner {
 				
 				if(power>90) {//check if the cleaner power is more than 50 units
 					if(cell.getCellType().equals("Tile")) {
-						
 						System.out.println(cell.getTileType());//print the cell type
+						log+=cell.getTileType()+"\n";
+						//printStream.println(cell.getTileType());
 						energy(cell.getTileType());//for tiles determine the energy units required and deduct
 						Tile tile =(Tile)cell.getElement();
 						if(!tile.isClean()) {
@@ -94,8 +109,12 @@ public class Cleaner {
 							tile.cleanFloor();
 							
 						System.out.println("Cleaning Tile on cell "+curr);
+						log+="Cleaning Tile on cell "+curr+"\n";
+						//printStream.println("Cleaning Tile on cell "+curr);
 						}else {
 							System.out.println(" Tile on cell "+curr+" is already clean");
+							log+=" Tile on cell "+curr+" is already clean"+"\n";
+							//printStream.println(" Tile on cell "+curr+" is already clean");
 						}
 
 						
@@ -103,6 +122,8 @@ public class Cleaner {
 						
 					}else {
 						System.out.println(cell.getCellType());
+						log+=cell.getCellType()+"\n";
+						//printStream.println(cell.getCellType());
 					}
 				}else {
 					
@@ -122,34 +143,52 @@ public class Cleaner {
 						Cell cell=cells[(curr%10)][curr/10];
 						setPoint(curr);//set the current position
 						System.out.println(getPosition()+" "+curr);
+						log+=getPosition()+" "+curr+"\n";
+						//printStream.println(getPosition()+" "+curr);
 						
 						if(cell.getCellType().equals("Tile")) {
 							System.out.println(cell.getTileType());
+							log+=cell.getTileType()+"\n";
+							//printStream.println(cell.getTileType());
 							energy(cell.getTileType());
+							printObstacles(curr);
 							Tile tile =(Tile)cell.getElement();
 							if(!tile.isClean()) {
 								clean(cell.getTileType());
 								tile.cleanFloor();
 								
 							System.out.println("Cleaning Tile on cell "+curr);
+							log+="Cleaning Tile on cell "+curr+"\n";
+							//printStream.println("Cleaning Tile on cell "+curr);
+							
 							}else {
-								System.out.println(" Tile on cell "+curr+" is already clean");
+								System.out.println("Tile on cell "+curr+" is already clean");
+								log+="Tile on cell "+curr+" is already clean"+"\n";
+								//printStream.println("Tile on cell "+curr+" is already clean");
 							}
 						}
 					}else {
 						System.out.println("Battery needs to charge .....");
+						log+="Battery needs to charge ....."+"\n";
+						//printStream.println("Battery needs to charge .....");
 						gotoChargingStation(graph,curr);// if power not sufficient  find the charging point
 					}
 					
 					prev=curr;//change the previous value to the cureent
 					System.out.println();
 					System.out.println();
+					log+="....."+"\n";
+					//printStream.println(" ");
+					//printStream.println(" ");
 					
 				}
 			}
 			
 			System.out.println();
 			System.out.println();
+			log+="....."+"\n";
+			//printStream.println(" ");
+			//printStream.println(" ");
 			
 			
 		}
@@ -176,8 +215,11 @@ public class Cleaner {
 		
 		
 		System.out.println("Closest Charging point on cell "+chargePoint);
+		log+="Closest Charging point on cell "+chargePoint+"\n";
+		//printStream.println("Closest Charging point on cell "+chargePoint);
 		
 		Stack<Integer> stack=(Stack<Integer>) graph.getPath(current, chargePoint);//find the path to the charging point
+		System.out.println(stack);
 		Stack<Integer> retracingStack=new Stack<>();
 		
 		
@@ -186,8 +228,11 @@ public class Cleaner {
 			current=stack.pop();
 			Cell cell=cells[(current%10)][current/10];
 			setPoint(current);//set the current position
+			printObstacles(current);
 			if(cell.getCellType().equals("Tile")) {
 				System.out.println(cell.getTileType());
+				log+=cell.getTileType()+"\n";
+				//printStream.println(cell.getTileType());
 				
 				energy(cell.getTileType());
 				Tile tile =(Tile)cell.getElement();
@@ -196,21 +241,31 @@ public class Cleaner {
 					tile.cleanFloor();
 					
 				System.out.println("Cleaning Tile on cell "+current);
+				log+="Cleaning Tile on cell "+current+"\n";
+				//printStream.println("Cleaning Tile on cell "+current);
 				}else {
-					System.out.println(" Tile on cell "+current+" is already clean");
+					System.out.println("Tile on cell "+current+" is already clean");
+					log+="Tile on cell "+current+" is already clean"+"\n";
+					//printStream.println("Tile on cell "+current+" is already clean");
 				}
 			}
 			System.out.println(getPosition()+" "+current);
+			log+=getPosition()+" "+current+"\n";
 			retracingStack.add(current);//and to stack to retrace back to the cureent position
 			System.out.println();
 			System.out.println();
-			System.out.println();
+			log+=" "+"\n";
+			//printStream.println(" ");
 		}
 		
 		//get the charging station  using the chargePoint
-		ChargingStation chargingStation=(ChargingStation) cells[chargePoint%10][chargePoint/10].getElement();
+		
+		System.out.println();
+		ChargingStation chargingStation=(ChargingStation) cells[chargePoint/10][chargePoint%10].getElement();
 		System.out.println("Cleaner on charge point at " + chargePoint);
-		chargingStation.rechargeElement(this);// recharge the cleaner
+		log+="Cleaner on charge point at " + chargePoint+"\n";
+		//printStream.println("Cleaner on charge point at " + chargePoint);
+		chargingStation.rechargeElement(this, log);// recharge the cleaner
 		
 		
 		//retrace back to continue cleaning
@@ -228,15 +283,24 @@ public class Cleaner {
 					tile.cleanFloor();
 					
 				System.out.println("Cleaning Tile on cell "+current);
+				log+="Cleaning Tile on cell "+current+"\n";
+				//printStream.println("Cleaning Tile on cell "+current);
 				}else {
 					System.out.println(" Tile on cell "+current+" is already clean");
+					log+="Tile on cell "+current+" is already clean"+"\n";
+					//printStream.println(" Tile on cell "+current+" is already clean");
 				}
 				
 			}
 			System.out.println(getPosition()+" "+current);
+			log+=getPosition()+" "+current+"\n";
+			//printStream.println(getPosition()+" "+current);
 			System.out.println();
 			System.out.println();
 			System.out.println();
+			//printStream.println(" ");
+			log+=" "+"\n";
+			//printStream.println(" ");
 			
 		}
 		
@@ -276,6 +340,9 @@ public class Cleaner {
 		}
 		
 		System.out.println("Energy Units remaining after moving : "+power);
+		log+="Energy Units remaining after moving : "+power+"\n";
+		//printStream.println("Energy Units remaining after moving : "+power);
+		
 	}
 	
 	void clean(TileType tileType) {
@@ -286,8 +353,9 @@ public class Cleaner {
 		}else if(tileType.equals(TileType.Lowpile)){
 			power-=2;
 		}
-		
 		System.out.println("Energy Units remaining after cleaning : "+power);
+		log+="Energy Units remaining after moving : "+power+"\n";
+		//printStream.println("Energy Units remaining after cleaning : "+power);
 	}
 
 
@@ -321,7 +389,12 @@ public class Cleaner {
 		List<Integer> distance=new ArrayList<>();
 		chargingpoints.stream().forEach(point->{
 			Stack<Integer> Stack= (Stack<Integer>) graph.getPath(currentPoint, point);
-			distance.add(Stack.size());
+			if(Stack==null) {
+				distance.add(Integer.MAX_VALUE);
+			}else {
+				distance.add(Stack.size());
+			}
+			
 		});
 		
 		int i=0;
@@ -352,9 +425,12 @@ public class Cleaner {
 			int down=position+10;
 			positions[3]=down;
 			
+			
 			for(int p:positions) {
 				if(cells[p%10][p/10].getCellType()!="Tile") {
 					System.out.println(cells[p%10][p/10].getCellType() + " Found at "+p);
+					log+=cells[p%10][p/10].getCellType() + " Found at "+p+"\n";
+					//printStream.println(cells[p%10][p/10].getCellType() + " Found at "+p);
 				}
 				
 			}

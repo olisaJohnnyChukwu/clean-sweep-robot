@@ -1,0 +1,1382 @@
+ floorplan2.json
+{
+  "walls": [
+    {
+      "point1": {
+        "x": 0,
+        "y": 0
+      },
+      "point2": {
+        "x": 0,
+        "y": 3
+      },
+      "point3": {
+        "x": 3,
+        "y": 3
+      },
+      "point4": {
+        "x": 3,
+        "y": 0
+      }
+    },
+    {
+      "point1": {
+        "x": 5,
+        "y": 5
+      },
+      "point2": {
+        "x": 5,
+        "y": 9
+      },
+      "point3": {
+        "x": 9,
+        "y": 9
+      },
+      "point4": {
+        "x": 9,
+        "y": 5
+      }
+    }
+  ],
+  "door": [
+    {
+      "point1": {
+        "x": 3,
+        "y": 1
+      },
+      "open": true
+    },
+    {
+      "point1": {
+        "x": 6,
+        "y": 5
+      },
+      "open": false
+    }
+  ],
+  "stair": [
+    {
+      "point": {
+        "x": 5,
+        "y": 9
+      }
+    }
+  ],
+  "tile": [
+    {
+      "TileType": "Highpile",
+      "point1": {
+        "x": 0,
+        "y": 0
+      },
+      "point2": {
+        "x": 0,
+        "y": 3
+      },
+      "point3": {
+        "x": 3,
+        "y": 3
+      },
+      "point4": {
+        "x": 3,
+        "y": 0
+      }
+    },
+    {
+      "TileType": "Lowpile",
+      "point1": {
+        "x": 5,
+        "y": 5
+      },
+      "point2": {
+        "x": 5,
+        "y": 9
+      },
+      "point3": {
+        "x": 9,
+        "y": 9
+      },
+      "point4": {
+        "x": 9,
+        "y": 5
+      }
+    }
+  ],
+  "chargingPoint": [
+    {
+      "point": {
+        "x": 0,
+        "y": 7
+      }
+    },
+    {
+      "point": {
+        "x": 9,
+        "y": 7
+      }
+    }
+  ],
+  "startingPoint": {
+    "x": 0,
+    "y": 5
+  }
+}
+Barefloor
+Energy Units remaining after moving : 249
+Energy Units remaining after moving : 248
+Cleaning Tile on cell 52
+.....
+Barefloor
+Energy Units remaining after moving : 247
+Energy Units remaining after moving : 246
+Cleaning Tile on cell 53
+.....
+Barefloor
+Energy Units remaining after moving : 245
+Energy Units remaining after moving : 244
+Cleaning Tile on cell 54
+Wall Found at 55
+.....
+Barefloor
+Energy Units remaining after moving : 243
+Energy Units remaining after moving : 242
+Cleaning Tile on cell 64
+Wall Found at 65
+.....
+Barefloor
+Energy Units remaining after moving : 241
+Energy Units remaining after moving : 240
+Cleaning Tile on cell 74
+Wall Found at 75
+.....
+Barefloor
+Energy Units remaining after moving : 239
+Energy Units remaining after moving : 238
+Cleaning Tile on cell 84
+Wall Found at 85
+.....
+Barefloor
+Energy Units remaining after moving : 237
+Energy Units remaining after moving : 236
+Cleaning Tile on cell 83
+.....
+Barefloor
+Energy Units remaining after moving : 235
+Energy Units remaining after moving : 234
+Cleaning Tile on cell 82
+.....
+Barefloor
+Energy Units remaining after moving : 233
+Energy Units remaining after moving : 232
+Cleaning Tile on cell 81
+.....
+Barefloor
+Energy Units remaining after moving : 231
+Energy Units remaining after moving : 230
+Cleaning Tile on cell 80
+Charging Point Found at 79
+Charging Point Found at 70
+.....
+Charging Point
+.....
+Barefloor
+Energy Units remaining after moving : 229
+Energy Units remaining after moving : 228
+Cleaning Tile on cell 71
+Charging Point Found at 70
+.....
+Barefloor
+Energy Units remaining after moving : 227
+Energy Units remaining after moving : 226
+Cleaning Tile on cell 72
+.....
+Barefloor
+Energy Units remaining after moving : 225
+Energy Units remaining after moving : 224
+Cleaning Tile on cell 73
+.....
+Barefloor
+Energy Units remaining after moving : 223
+Energy Units remaining after moving : 222
+Cleaning Tile on cell 63
+.....
+Barefloor
+Energy Units remaining after moving : 221
+Energy Units remaining after moving : 220
+Cleaning Tile on cell 62
+.....
+Barefloor
+Energy Units remaining after moving : 219
+Energy Units remaining after moving : 218
+Cleaning Tile on cell 61
+.....
+Barefloor
+Energy Units remaining after moving : 217
+Energy Units remaining after moving : 216
+Cleaning Tile on cell 60
+Wall Found at 59
+Charging Point Found at 70
+.....
+Cleaner on x:0 y:5 50
+Barefloor
+Energy Units remaining after moving : 215
+Energy Units remaining after moving : 214
+Cleaning Tile on cell 50
+.....
+Cleaner on x:1 y:5 51
+Barefloor
+Energy Units remaining after moving : 213
+Energy Units remaining after moving : 212
+Cleaning Tile on cell 51
+.....
+Cleaner on x:2 y:5 52
+Barefloor
+Energy Units remaining after moving : 211
+Tile on cell 52 is already clean
+.....
+Cleaner on x:3 y:5 53
+Barefloor
+Energy Units remaining after moving : 210
+Tile on cell 53 is already clean
+.....
+Cleaner on x:4 y:5 54
+Barefloor
+Energy Units remaining after moving : 209
+Wall Found at 55
+Tile on cell 54 is already clean
+.....
+Cleaner on x:4 y:6 64
+Barefloor
+Energy Units remaining after moving : 208
+Wall Found at 65
+Tile on cell 64 is already clean
+.....
+Cleaner on x:4 y:7 74
+Barefloor
+Energy Units remaining after moving : 207
+Wall Found at 75
+Tile on cell 74 is already clean
+.....
+Cleaner on x:4 y:8 84
+Barefloor
+Energy Units remaining after moving : 206
+Wall Found at 85
+Tile on cell 84 is already clean
+.....
+Cleaner on x:3 y:8 83
+Barefloor
+Energy Units remaining after moving : 205
+Tile on cell 83 is already clean
+.....
+Cleaner on x:2 y:8 82
+Barefloor
+Energy Units remaining after moving : 204
+Tile on cell 82 is already clean
+.....
+Cleaner on x:1 y:8 81
+Barefloor
+Energy Units remaining after moving : 203
+Tile on cell 81 is already clean
+.....
+Cleaner on x:0 y:8 80
+Barefloor
+Energy Units remaining after moving : 202
+Charging Point Found at 79
+Charging Point Found at 70
+Tile on cell 80 is already clean
+.....
+Cleaner on x:0 y:9 90
+Barefloor
+Energy Units remaining after moving : 201
+Energy Units remaining after moving : 200
+Cleaning Tile on cell 90
+.....
+.....
+Barefloor
+Energy Units remaining after moving : 199
+Energy Units remaining after moving : 198
+Cleaning Tile on cell 91
+.....
+Barefloor
+Energy Units remaining after moving : 197
+Energy Units remaining after moving : 196
+Cleaning Tile on cell 92
+.....
+Barefloor
+Energy Units remaining after moving : 195
+Energy Units remaining after moving : 194
+Cleaning Tile on cell 93
+.....
+Barefloor
+Energy Units remaining after moving : 193
+Energy Units remaining after moving : 192
+Cleaning Tile on cell 94
+Stairs Found at 95
+.....
+Cleaner on x:4 y:8 84
+Barefloor
+Energy Units remaining after moving : 191
+Wall Found at 85
+Tile on cell 84 is already clean
+.....
+Cleaner on x:3 y:8 83
+Barefloor
+Energy Units remaining after moving : 190
+Tile on cell 83 is already clean
+.....
+Cleaner on x:2 y:8 82
+Barefloor
+Energy Units remaining after moving : 189
+Tile on cell 82 is already clean
+.....
+Cleaner on x:1 y:8 81
+Barefloor
+Energy Units remaining after moving : 188
+Tile on cell 81 is already clean
+.....
+Cleaner on x:0 y:8 80
+Barefloor
+Energy Units remaining after moving : 187
+Charging Point Found at 79
+Charging Point Found at 70
+Tile on cell 80 is already clean
+.....
+Cleaner on x:0 y:7 70
+.....
+Cleaner on x:1 y:7 71
+Barefloor
+Energy Units remaining after moving : 186
+Charging Point Found at 70
+Tile on cell 71 is already clean
+.....
+Cleaner on x:2 y:7 72
+Barefloor
+Energy Units remaining after moving : 185
+Tile on cell 72 is already clean
+.....
+Cleaner on x:3 y:7 73
+Barefloor
+Energy Units remaining after moving : 184
+Tile on cell 73 is already clean
+.....
+Cleaner on x:4 y:7 74
+Barefloor
+Energy Units remaining after moving : 183
+Wall Found at 75
+Tile on cell 74 is already clean
+.....
+Cleaner on x:4 y:6 64
+Barefloor
+Energy Units remaining after moving : 182
+Wall Found at 65
+Tile on cell 64 is already clean
+.....
+Cleaner on x:4 y:5 54
+Barefloor
+Energy Units remaining after moving : 181
+Wall Found at 55
+Tile on cell 54 is already clean
+.....
+Cleaner on x:3 y:5 53
+Barefloor
+Energy Units remaining after moving : 180
+Tile on cell 53 is already clean
+.....
+Cleaner on x:2 y:5 52
+Barefloor
+Energy Units remaining after moving : 179
+Tile on cell 52 is already clean
+.....
+Cleaner on x:1 y:5 51
+Barefloor
+Energy Units remaining after moving : 178
+Tile on cell 51 is already clean
+.....
+Cleaner on x:0 y:5 50
+Barefloor
+Energy Units remaining after moving : 177
+Tile on cell 50 is already clean
+.....
+Cleaner on x:0 y:4 40
+Barefloor
+Energy Units remaining after moving : 176
+Wall Found at 30
+Energy Units remaining after moving : 175
+Cleaning Tile on cell 40
+.....
+Cleaner on x:1 y:4 41
+Barefloor
+Energy Units remaining after moving : 174
+Wall Found at 31
+Energy Units remaining after moving : 173
+Cleaning Tile on cell 41
+.....
+Cleaner on x:2 y:4 42
+Barefloor
+Energy Units remaining after moving : 172
+Wall Found at 32
+Energy Units remaining after moving : 171
+Cleaning Tile on cell 42
+.....
+Cleaner on x:3 y:4 43
+Barefloor
+Energy Units remaining after moving : 170
+Wall Found at 33
+Energy Units remaining after moving : 169
+Cleaning Tile on cell 43
+.....
+Cleaner on x:4 y:4 44
+Barefloor
+Energy Units remaining after moving : 168
+Energy Units remaining after moving : 167
+Cleaning Tile on cell 44
+.....
+.....
+Barefloor
+Energy Units remaining after moving : 166
+Energy Units remaining after moving : 165
+Cleaning Tile on cell 34
+Wall Found at 33
+.....
+Barefloor
+Energy Units remaining after moving : 164
+Energy Units remaining after moving : 163
+Cleaning Tile on cell 35
+.....
+Barefloor
+Energy Units remaining after moving : 162
+Energy Units remaining after moving : 161
+Cleaning Tile on cell 36
+.....
+Barefloor
+Energy Units remaining after moving : 160
+Energy Units remaining after moving : 159
+Cleaning Tile on cell 37
+.....
+Barefloor
+Energy Units remaining after moving : 158
+Energy Units remaining after moving : 157
+Cleaning Tile on cell 38
+.....
+Barefloor
+Energy Units remaining after moving : 156
+Energy Units remaining after moving : 155
+Cleaning Tile on cell 48
+Wall Found at 58
+.....
+Barefloor
+Energy Units remaining after moving : 154
+Energy Units remaining after moving : 153
+Cleaning Tile on cell 49
+Wall Found at 59
+.....
+Barefloor
+Energy Units remaining after moving : 152
+Energy Units remaining after moving : 151
+Cleaning Tile on cell 39
+.....
+Barefloor
+Energy Units remaining after moving : 150
+Energy Units remaining after moving : 149
+Cleaning Tile on cell 29
+Wall Found at 30
+.....
+Barefloor
+Energy Units remaining after moving : 148
+Energy Units remaining after moving : 147
+Cleaning Tile on cell 19
+.....
+Barefloor
+Energy Units remaining after moving : 146
+Energy Units remaining after moving : 145
+Cleaning Tile on cell 18
+.....
+Barefloor
+Energy Units remaining after moving : 144
+Energy Units remaining after moving : 143
+Cleaning Tile on cell 17
+.....
+Barefloor
+Energy Units remaining after moving : 142
+Energy Units remaining after moving : 141
+Cleaning Tile on cell 16
+.....
+Barefloor
+Energy Units remaining after moving : 140
+Energy Units remaining after moving : 139
+Cleaning Tile on cell 6
+.....
+Cleaner on x:6 y:1 16
+Barefloor
+Energy Units remaining after moving : 138
+Tile on cell 16 is already clean
+.....
+Cleaner on x:7 y:1 17
+Barefloor
+Energy Units remaining after moving : 137
+Tile on cell 17 is already clean
+.....
+Cleaner on x:8 y:1 18
+Barefloor
+Energy Units remaining after moving : 136
+Tile on cell 18 is already clean
+.....
+Cleaner on x:9 y:1 19
+Barefloor
+Energy Units remaining after moving : 135
+Tile on cell 19 is already clean
+.....
+Cleaner on x:9 y:2 29
+Barefloor
+Energy Units remaining after moving : 134
+Wall Found at 30
+Tile on cell 29 is already clean
+.....
+Cleaner on x:9 y:3 39
+Barefloor
+Energy Units remaining after moving : 133
+Tile on cell 39 is already clean
+.....
+Cleaner on x:9 y:4 49
+Barefloor
+Energy Units remaining after moving : 132
+Wall Found at 59
+Tile on cell 49 is already clean
+.....
+Cleaner on x:8 y:4 48
+Barefloor
+Energy Units remaining after moving : 131
+Wall Found at 58
+Tile on cell 48 is already clean
+.....
+Cleaner on x:8 y:3 38
+Barefloor
+Energy Units remaining after moving : 130
+Tile on cell 38 is already clean
+.....
+Cleaner on x:7 y:3 37
+Barefloor
+Energy Units remaining after moving : 129
+Tile on cell 37 is already clean
+.....
+Cleaner on x:6 y:3 36
+Barefloor
+Energy Units remaining after moving : 128
+Tile on cell 36 is already clean
+.....
+Cleaner on x:5 y:3 35
+Barefloor
+Energy Units remaining after moving : 127
+Tile on cell 35 is already clean
+.....
+Cleaner on x:4 y:3 34
+Barefloor
+Energy Units remaining after moving : 126
+Wall Found at 33
+Tile on cell 34 is already clean
+.....
+Cleaner on x:4 y:2 24
+Barefloor
+Energy Units remaining after moving : 125
+Wall Found at 23
+Energy Units remaining after moving : 124
+Cleaning Tile on cell 24
+.....
+Cleaner on x:5 y:2 25
+Barefloor
+Energy Units remaining after moving : 123
+Energy Units remaining after moving : 122
+Cleaning Tile on cell 25
+.....
+Cleaner on x:6 y:2 26
+Barefloor
+Energy Units remaining after moving : 121
+Energy Units remaining after moving : 120
+Cleaning Tile on cell 26
+.....
+.....
+Barefloor
+Energy Units remaining after moving : 119
+ Tile on cell 25 is already clean
+.....
+Barefloor
+Energy Units remaining after moving : 118
+ Tile on cell 24 is already clean
+Wall Found at 23
+.....
+Barefloor
+Energy Units remaining after moving : 117
+Energy Units remaining after moving : 116
+Cleaning Tile on cell 14
+Door Found at 13
+.....
+Barefloor
+Energy Units remaining after moving : 115
+Energy Units remaining after moving : 114
+Cleaning Tile on cell 4
+Wall Found at 3
+.....
+Cleaner on x:4 y:1 14
+Barefloor
+Energy Units remaining after moving : 113
+Door Found at 13
+Tile on cell 14 is already clean
+.....
+Cleaner on x:3 y:1 13
+.....
+.....
+Highpile
+Energy Units remaining after moving : 110
+ Tile on cell 12 is already clean
+Door Found at 13
+.....
+Highpile
+Energy Units remaining after moving : 107
+ Tile on cell 2 is already clean
+Wall Found at 3
+.....
+Cleaner on x:2 y:1 12
+Highpile
+Energy Units remaining after moving : 104
+Door Found at 13
+Tile on cell 12 is already clean
+.....
+Cleaner on x:2 y:2 22
+Highpile
+Energy Units remaining after moving : 101
+Wall Found at 23
+Wall Found at 32
+Tile on cell 22 is already clean
+.....
+.....
+Highpile
+Energy Units remaining after moving : 98
+ Tile on cell 21 is already clean
+Wall Found at 31
+.....
+Highpile
+Energy Units remaining after moving : 95
+ Tile on cell 20 is already clean
+Wall Found at 30
+.....
+Highpile
+Energy Units remaining after moving : 92
+ Tile on cell 10 is already clean
+.....
+Highpile
+Energy Units remaining after moving : 89
+ Tile on cell 0 is already clean
+.....
+Battery needs to charge .....
+Closest Charging point on cell 7
+Highpile
+Energy Units remaining after moving : 86
+Tile on cell 11 is already clean
+Cleaner on x:1 y:1 11
+ 
+Wall Found at 31
+Highpile
+Energy Units remaining after moving : 83
+Tile on cell 21 is already clean
+Cleaner on x:1 y:2 21
+ 
+Wall Found at 23
+Wall Found at 32
+Highpile
+Energy Units remaining after moving : 80
+Tile on cell 22 is already clean
+Cleaner on x:2 y:2 22
+ 
+Door Found at 13
+Highpile
+Energy Units remaining after moving : 77
+Tile on cell 12 is already clean
+Cleaner on x:2 y:1 12
+ 
+Wall Found at 3
+Wall Found at 23
+Cleaner on x:3 y:1 13
+ 
+Door Found at 13
+Barefloor
+Energy Units remaining after moving : 76
+Tile on cell 14 is already clean
+Cleaner on x:4 y:1 14
+ 
+Wall Found at 23
+Barefloor
+Energy Units remaining after moving : 75
+Tile on cell 24 is already clean
+Cleaner on x:4 y:2 24
+ 
+Wall Found at 33
+Barefloor
+Energy Units remaining after moving : 74
+Tile on cell 34 is already clean
+Cleaner on x:4 y:3 34
+ 
+Barefloor
+Energy Units remaining after moving : 73
+Tile on cell 35 is already clean
+Cleaner on x:5 y:3 35
+ 
+Barefloor
+Energy Units remaining after moving : 72
+Tile on cell 36 is already clean
+Cleaner on x:6 y:3 36
+ 
+Barefloor
+Energy Units remaining after moving : 71
+Tile on cell 37 is already clean
+Cleaner on x:7 y:3 37
+ 
+Barefloor
+Energy Units remaining after moving : 70
+Tile on cell 38 is already clean
+Cleaner on x:8 y:3 38
+ 
+Wall Found at 58
+Barefloor
+Energy Units remaining after moving : 69
+Tile on cell 48 is already clean
+Cleaner on x:8 y:4 48
+ 
+Wall Found at 59
+Barefloor
+Energy Units remaining after moving : 68
+Tile on cell 49 is already clean
+Cleaner on x:9 y:4 49
+ 
+Barefloor
+Energy Units remaining after moving : 67
+Tile on cell 39 is already clean
+Cleaner on x:9 y:3 39
+ 
+Wall Found at 30
+Barefloor
+Energy Units remaining after moving : 66
+Tile on cell 29 is already clean
+Cleaner on x:9 y:2 29
+ 
+Barefloor
+Energy Units remaining after moving : 65
+Tile on cell 19 is already clean
+Cleaner on x:9 y:1 19
+ 
+Barefloor
+Energy Units remaining after moving : 64
+Tile on cell 18 is already clean
+Cleaner on x:8 y:1 18
+ 
+Barefloor
+Energy Units remaining after moving : 63
+Tile on cell 17 is already clean
+Cleaner on x:7 y:1 17
+ 
+Barefloor
+Energy Units remaining after moving : 62
+Energy Units remaining after moving : 61
+Cleaning Tile on cell 7
+Cleaner on x:7 y:0 7
+ 
+Cleaner on charge point at 7
+Energy Units remaining after moving : 249
+Tile on cell 7 is already clean
+Cleaner on x:7 y:0 7
+ 
+Energy Units remaining after moving : 248
+Tile on cell 17 is already clean
+Cleaner on x:7 y:1 17
+ 
+Energy Units remaining after moving : 247
+Tile on cell 18 is already clean
+Cleaner on x:8 y:1 18
+ 
+Energy Units remaining after moving : 246
+Tile on cell 19 is already clean
+Cleaner on x:9 y:1 19
+ 
+Energy Units remaining after moving : 245
+Tile on cell 29 is already clean
+Cleaner on x:9 y:2 29
+ 
+Energy Units remaining after moving : 244
+Tile on cell 39 is already clean
+Cleaner on x:9 y:3 39
+ 
+Energy Units remaining after moving : 243
+Tile on cell 49 is already clean
+Cleaner on x:9 y:4 49
+ 
+Energy Units remaining after moving : 242
+Tile on cell 48 is already clean
+Cleaner on x:8 y:4 48
+ 
+Energy Units remaining after moving : 241
+Tile on cell 38 is already clean
+Cleaner on x:8 y:3 38
+ 
+Energy Units remaining after moving : 240
+Tile on cell 37 is already clean
+Cleaner on x:7 y:3 37
+ 
+Energy Units remaining after moving : 239
+Tile on cell 36 is already clean
+Cleaner on x:6 y:3 36
+ 
+Energy Units remaining after moving : 238
+Tile on cell 35 is already clean
+Cleaner on x:5 y:3 35
+ 
+Energy Units remaining after moving : 237
+Tile on cell 34 is already clean
+Cleaner on x:4 y:3 34
+ 
+Energy Units remaining after moving : 236
+Tile on cell 24 is already clean
+Cleaner on x:4 y:2 24
+ 
+Energy Units remaining after moving : 235
+Tile on cell 14 is already clean
+Cleaner on x:4 y:1 14
+ 
+Cleaner on x:3 y:1 13
+ 
+Energy Units remaining after moving : 232
+Tile on cell 12 is already clean
+Cleaner on x:2 y:1 12
+ 
+Energy Units remaining after moving : 229
+Tile on cell 22 is already clean
+Cleaner on x:2 y:2 22
+ 
+Energy Units remaining after moving : 226
+Tile on cell 21 is already clean
+Cleaner on x:1 y:2 21
+ 
+Energy Units remaining after moving : 223
+Tile on cell 11 is already clean
+Cleaner on x:1 y:1 11
+ 
+.....
+Cleaner on x:0 y:1 10
+Highpile
+Energy Units remaining after moving : 220
+Tile on cell 10 is already clean
+.....
+Cleaner on x:0 y:2 20
+Highpile
+Energy Units remaining after moving : 217
+Wall Found at 30
+Tile on cell 20 is already clean
+.....
+Cleaner on x:1 y:2 21
+Highpile
+Energy Units remaining after moving : 214
+Wall Found at 31
+Tile on cell 21 is already clean
+.....
+Cleaner on x:2 y:2 22
+Highpile
+Energy Units remaining after moving : 211
+Wall Found at 23
+Wall Found at 32
+Tile on cell 22 is already clean
+.....
+Cleaner on x:2 y:1 12
+Highpile
+Energy Units remaining after moving : 208
+Door Found at 13
+Tile on cell 12 is already clean
+.....
+Cleaner on x:1 y:1 11
+Highpile
+Energy Units remaining after moving : 205
+Tile on cell 11 is already clean
+.....
+.....
+Highpile
+Energy Units remaining after moving : 202
+ Tile on cell 1 is already clean
+.....
+Cleaner on x:1 y:1 11
+Highpile
+Energy Units remaining after moving : 199
+Tile on cell 11 is already clean
+.....
+Cleaner on x:1 y:2 21
+Highpile
+Energy Units remaining after moving : 196
+Wall Found at 31
+Tile on cell 21 is already clean
+.....
+Cleaner on x:2 y:2 22
+Highpile
+Energy Units remaining after moving : 193
+Wall Found at 23
+Wall Found at 32
+Tile on cell 22 is already clean
+.....
+Cleaner on x:2 y:1 12
+Highpile
+Energy Units remaining after moving : 190
+Door Found at 13
+Tile on cell 12 is already clean
+.....
+Cleaner on x:3 y:1 13
+.....
+Cleaner on x:4 y:1 14
+Barefloor
+Energy Units remaining after moving : 189
+Door Found at 13
+Tile on cell 14 is already clean
+.....
+Cleaner on x:4 y:2 24
+Barefloor
+Energy Units remaining after moving : 188
+Wall Found at 23
+Tile on cell 24 is already clean
+.....
+Cleaner on x:4 y:3 34
+Barefloor
+Energy Units remaining after moving : 187
+Wall Found at 33
+Tile on cell 34 is already clean
+.....
+Cleaner on x:5 y:3 35
+Barefloor
+Energy Units remaining after moving : 186
+Tile on cell 35 is already clean
+.....
+Cleaner on x:6 y:3 36
+Barefloor
+Energy Units remaining after moving : 185
+Tile on cell 36 is already clean
+.....
+Cleaner on x:7 y:3 37
+Barefloor
+Energy Units remaining after moving : 184
+Tile on cell 37 is already clean
+.....
+Cleaner on x:8 y:3 38
+Barefloor
+Energy Units remaining after moving : 183
+Tile on cell 38 is already clean
+.....
+Cleaner on x:8 y:4 48
+Barefloor
+Energy Units remaining after moving : 182
+Wall Found at 58
+Tile on cell 48 is already clean
+.....
+Cleaner on x:9 y:4 49
+Barefloor
+Energy Units remaining after moving : 181
+Wall Found at 59
+Tile on cell 49 is already clean
+.....
+Cleaner on x:9 y:3 39
+Barefloor
+Energy Units remaining after moving : 180
+Tile on cell 39 is already clean
+.....
+Cleaner on x:9 y:2 29
+Barefloor
+Energy Units remaining after moving : 179
+Wall Found at 30
+Tile on cell 29 is already clean
+.....
+Cleaner on x:9 y:1 19
+Barefloor
+Energy Units remaining after moving : 178
+Tile on cell 19 is already clean
+.....
+Cleaner on x:8 y:1 18
+Barefloor
+Energy Units remaining after moving : 177
+Tile on cell 18 is already clean
+.....
+Cleaner on x:7 y:1 17
+Barefloor
+Energy Units remaining after moving : 176
+Tile on cell 17 is already clean
+.....
+Cleaner on x:6 y:1 16
+Barefloor
+Energy Units remaining after moving : 175
+Tile on cell 16 is already clean
+.....
+Cleaner on x:6 y:2 26
+Barefloor
+Energy Units remaining after moving : 174
+Tile on cell 26 is already clean
+.....
+Cleaner on x:5 y:2 25
+Barefloor
+Energy Units remaining after moving : 173
+Tile on cell 25 is already clean
+.....
+Cleaner on x:5 y:1 15
+Barefloor
+Energy Units remaining after moving : 172
+Energy Units remaining after moving : 171
+Cleaning Tile on cell 15
+.....
+.....
+Barefloor
+Energy Units remaining after moving : 170
+Energy Units remaining after moving : 169
+Cleaning Tile on cell 5
+.....
+Cleaner on x:5 y:1 15
+Barefloor
+Energy Units remaining after moving : 168
+Tile on cell 15 is already clean
+.....
+Cleaner on x:6 y:1 16
+Barefloor
+Energy Units remaining after moving : 167
+Tile on cell 16 is already clean
+.....
+Cleaner on x:7 y:1 17
+Barefloor
+Energy Units remaining after moving : 166
+Tile on cell 17 is already clean
+.....
+Cleaner on x:8 y:1 18
+Barefloor
+Energy Units remaining after moving : 165
+Tile on cell 18 is already clean
+.....
+Cleaner on x:9 y:1 19
+Barefloor
+Energy Units remaining after moving : 164
+Tile on cell 19 is already clean
+.....
+Cleaner on x:9 y:2 29
+Barefloor
+Energy Units remaining after moving : 163
+Wall Found at 30
+Tile on cell 29 is already clean
+.....
+Cleaner on x:9 y:3 39
+Barefloor
+Energy Units remaining after moving : 162
+Tile on cell 39 is already clean
+.....
+Cleaner on x:9 y:4 49
+Barefloor
+Energy Units remaining after moving : 161
+Wall Found at 59
+Tile on cell 49 is already clean
+.....
+Cleaner on x:8 y:4 48
+Barefloor
+Energy Units remaining after moving : 160
+Wall Found at 58
+Tile on cell 48 is already clean
+.....
+Cleaner on x:8 y:3 38
+Barefloor
+Energy Units remaining after moving : 159
+Tile on cell 38 is already clean
+.....
+Cleaner on x:7 y:3 37
+Barefloor
+Energy Units remaining after moving : 158
+Tile on cell 37 is already clean
+.....
+Cleaner on x:6 y:3 36
+Barefloor
+Energy Units remaining after moving : 157
+Tile on cell 36 is already clean
+.....
+Cleaner on x:5 y:3 35
+Barefloor
+Energy Units remaining after moving : 156
+Tile on cell 35 is already clean
+.....
+Cleaner on x:4 y:3 34
+Barefloor
+Energy Units remaining after moving : 155
+Wall Found at 33
+Tile on cell 34 is already clean
+.....
+Cleaner on x:4 y:2 24
+Barefloor
+Energy Units remaining after moving : 154
+Wall Found at 23
+Tile on cell 24 is already clean
+.....
+Cleaner on x:5 y:2 25
+Barefloor
+Energy Units remaining after moving : 153
+Tile on cell 25 is already clean
+.....
+Cleaner on x:6 y:2 26
+Barefloor
+Energy Units remaining after moving : 152
+Tile on cell 26 is already clean
+.....
+Cleaner on x:7 y:2 27
+Barefloor
+Energy Units remaining after moving : 151
+Energy Units remaining after moving : 150
+Cleaning Tile on cell 27
+.....
+.....
+Barefloor
+Energy Units remaining after moving : 149
+Energy Units remaining after moving : 148
+Cleaning Tile on cell 28
+.....
+Cleaner on x:8 y:1 18
+Barefloor
+Energy Units remaining after moving : 147
+Tile on cell 18 is already clean
+.....
+Cleaner on x:7 y:1 17
+Barefloor
+Energy Units remaining after moving : 146
+Tile on cell 17 is already clean
+.....
+Cleaner on x:7 y:0 7
+Barefloor
+Energy Units remaining after moving : 145
+Tile on cell 7 is already clean
+.....
+.....
+Barefloor
+Energy Units remaining after moving : 144
+Energy Units remaining after moving : 143
+Cleaning Tile on cell 8
+.....
+Barefloor
+Energy Units remaining after moving : 142
+Energy Units remaining after moving : 141
+Cleaning Tile on cell 9
+.....
+Cleaner on x:9 y:1 19
+Barefloor
+Energy Units remaining after moving : 140
+Tile on cell 19 is already clean
+.....
+Cleaner on x:8 y:1 18
+Barefloor
+Energy Units remaining after moving : 139
+Tile on cell 18 is already clean
+.....
+Cleaner on x:7 y:1 17
+Barefloor
+Energy Units remaining after moving : 138
+Tile on cell 17 is already clean
+.....
+Cleaner on x:6 y:1 16
+Barefloor
+Energy Units remaining after moving : 137
+Tile on cell 16 is already clean
+.....
+Cleaner on x:6 y:2 26
+Barefloor
+Energy Units remaining after moving : 136
+Tile on cell 26 is already clean
+.....
+Cleaner on x:6 y:3 36
+Barefloor
+Energy Units remaining after moving : 135
+Tile on cell 36 is already clean
+.....
+Cleaner on x:5 y:3 35
+Barefloor
+Energy Units remaining after moving : 134
+Tile on cell 35 is already clean
+.....
+Cleaner on x:4 y:3 34
+Barefloor
+Energy Units remaining after moving : 133
+Wall Found at 33
+Tile on cell 34 is already clean
+.....
+Cleaner on x:4 y:4 44
+Barefloor
+Energy Units remaining after moving : 132
+Tile on cell 44 is already clean
+.....
+Cleaner on x:5 y:4 45
+Barefloor
+Energy Units remaining after moving : 131
+Wall Found at 55
+Energy Units remaining after moving : 130
+Cleaning Tile on cell 45
+.....
+Cleaner on x:6 y:4 46
+Barefloor
+Energy Units remaining after moving : 129
+Door Found at 56
+Energy Units remaining after moving : 128
+Cleaning Tile on cell 46
+.....
+Cleaner on x:7 y:4 47
+Barefloor
+Energy Units remaining after moving : 127
+Wall Found at 57
+Energy Units remaining after moving : 126
+Cleaning Tile on cell 47
+.....
+.....
+Barefloor
+Energy Units remaining after moving : 125
+ Tile on cell 46 is already clean
+Door Found at 56
+.....
+Barefloor
+Energy Units remaining after moving : 124
+ Tile on cell 45 is already clean
+Wall Found at 55
+.....
+Cleaner on x:5 y:3 35
+Barefloor
+Energy Units remaining after moving : 123
+Tile on cell 35 is already clean
+.....
+Cleaner on x:4 y:3 34
+Barefloor
+Energy Units remaining after moving : 122
+Wall Found at 33
+Tile on cell 34 is already clean
+.....
+Cleaner on x:4 y:4 44
+Barefloor
+Energy Units remaining after moving : 121
+Tile on cell 44 is already clean
+.....
+Cleaner on x:4 y:5 54
+Barefloor
+Energy Units remaining after moving : 120
+Wall Found at 55
+Tile on cell 54 is already clean
+.....
+Cleaner on x:4 y:6 64
+Barefloor
+Energy Units remaining after moving : 119
+Wall Found at 65
+Tile on cell 64 is already clean
+.....
+Cleaner on x:4 y:7 74
+Barefloor
+Energy Units remaining after moving : 118
+Wall Found at 75
+Tile on cell 74 is already clean
+.....
+Cleaner on x:4 y:8 84
+Barefloor
+Energy Units remaining after moving : 117
+Wall Found at 85
+Tile on cell 84 is already clean
+.....
+Cleaner on x:3 y:8 83
+Barefloor
+Energy Units remaining after moving : 116
+Tile on cell 83 is already clean
+.....
+Cleaner on x:2 y:8 82
+Barefloor
+Energy Units remaining after moving : 115
+Tile on cell 82 is already clean
+.....
+Cleaner on x:1 y:8 81
+Barefloor
+Energy Units remaining after moving : 114
+Tile on cell 81 is already clean
+.....
+Cleaner on x:0 y:8 80
+Barefloor
+Energy Units remaining after moving : 113
+Charging Point Found at 79
+Charging Point Found at 70
+Tile on cell 80 is already clean
+.....
+Cleaner on x:0 y:7 70
+.....
+Cleaner on x:1 y:7 71
+Barefloor
+Energy Units remaining after moving : 112
+Charging Point Found at 70
+Tile on cell 71 is already clean
+.....
+Cleaner on x:2 y:7 72
+Barefloor
+Energy Units remaining after moving : 111
+Tile on cell 72 is already clean
+.....
+Cleaner on x:3 y:7 73
+Barefloor
+Energy Units remaining after moving : 110
+Tile on cell 73 is already clean
+.....
+Cleaner on x:3 y:6 63
+Barefloor
+Energy Units remaining after moving : 109
+Tile on cell 63 is already clean
+.....
+Cleaner on x:3 y:5 53
+Barefloor
+Energy Units remaining after moving : 108
+Tile on cell 53 is already clean
+.....
+Cleaner on x:2 y:5 52
+Barefloor
+Energy Units remaining after moving : 107
+Tile on cell 52 is already clean
+.....
+Cleaner on x:1 y:5 51
+Barefloor
+Energy Units remaining after moving : 106
+Tile on cell 51 is already clean
+.....
+Cleaner on x:0 y:5 50
+Barefloor
+Energy Units remaining after moving : 105
+Tile on cell 50 is already clean
+.....
+Cleaner on x:0 y:4 40
+Barefloor
+Energy Units remaining after moving : 104
+Wall Found at 30
+Tile on cell 40 is already clean
+.....
+Cleaner on x:1 y:4 41
+Barefloor
+Energy Units remaining after moving : 103
+Wall Found at 31
+Tile on cell 41 is already clean
+.....
+Cleaner on x:2 y:4 42
+Barefloor
+Energy Units remaining after moving : 102
+Wall Found at 32
+Tile on cell 42 is already clean
+.....
+Cleaner on x:3 y:4 43
+Barefloor
+Energy Units remaining after moving : 101
+Wall Found at 33
+Tile on cell 43 is already clean
+.....
+.....
+Barefloor
+Energy Units remaining after moving : 100
+ Tile on cell 42 is already clean
+Wall Found at 32
+.....
+Barefloor
+Energy Units remaining after moving : 99
+ Tile on cell 41 is already clean
+Wall Found at 31
+.....
+Barefloor
+Energy Units remaining after moving : 98
+ Tile on cell 40 is already clean
+Wall Found at 30
+.....
+

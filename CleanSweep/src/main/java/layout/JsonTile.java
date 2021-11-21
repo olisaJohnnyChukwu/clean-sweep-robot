@@ -8,18 +8,23 @@ public class JsonTile {
 	Point point1;
 	Point point2;
 	Point point3;
+	Point point4;
+
 	
 	
 	
 	
 	
-	public JsonTile(TileType tileType, Point point1, Point point2, Point point3) {
+	
+	public JsonTile(TileType tileType, Point point1, Point point2, Point point3, Point point4) {
 		super();
 		TileType = tileType;
 		this.point1 = point1;
 		this.point2 = point2;
 		this.point3 = point3;
+		this.point4 = point4;
 	}
+	
 	public TileType getTileType() {
 		return TileType;
 	}
@@ -38,11 +43,21 @@ public class JsonTile {
 	public void setPoint2(Point point2) {
 		this.point2 = point2;
 	}
+
 	public Point getPoint3() {
 		return point3;
 	}
+
 	public void setPoint3(Point point3) {
 		this.point3 = point3;
+	}
+
+	public Point getPoint4() {
+		return point4;
+	}
+
+	public void setPoint4(Point point4) {
+		this.point4 = point4;
 	}
 	
 	

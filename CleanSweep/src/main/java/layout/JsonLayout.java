@@ -71,18 +71,15 @@ public class JsonLayout {
 	public static void main(String[] args) throws IOException {
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
 		
-		Point point1=new Point(3,0);
-		Point point2=new Point(3,3);
-		Point point3=new Point(0,3);
 		
-		Point point4=new Point(6,0);
-		Point point5=new Point(6,3);
-		Point point6=new Point(9,3);
+		
+		
 		
 		JsonLayout jsonLayout =new JsonLayout();
 		
-		JsonWall Wall1=new JsonWall(point1,point2,point3);
-		JsonWall Wall2=new JsonWall(point4,point5,point6);
+		JsonWall Wall1=new JsonWall(new Point(0,0),new Point(0,3),new Point(3,3),new Point(3,0));
+		
+		JsonWall Wall2=new JsonWall(new Point(5,5),new Point(5,9),new Point(9,9),new Point(9,5));
 		
 		
 		
@@ -93,9 +90,9 @@ public class JsonLayout {
 		
 		
 		JsonDoor door=new JsonDoor (new Point(3,1));
-		door.setOpen(false);
-		JsonDoor door2=new JsonDoor (new Point(8,3));
 		door.setOpen(true);
+		JsonDoor door2=new JsonDoor (new Point(6,5));
+		door2.setOpen(false);
 		
 		
 		List<JsonDoor> doors= new ArrayList<JsonDoor>();
@@ -107,9 +104,17 @@ public class JsonLayout {
 		List<JsonStair> stairs= new ArrayList<JsonStair>();
 		stairs.add(stair);
 		
-		JsonTile tile=new JsonTile(TileType.Highpile,point1,point2,point3);
+		JsonTile tile=new JsonTile(TileType.Highpile,new Point(0,0),new Point(0,3),new Point(3,3),new Point(3,0));
+		JsonTile tile2=new JsonTile(TileType.Lowpile,new Point(5,5),new Point(5,9),new Point(9,9),new Point(9,5));
 		List<JsonTile> tiles=new ArrayList<JsonTile>();
 		tiles.add(tile);
+		tiles.add(tile2);
+		
+		
+		
+		
+		
+		
 		
 		List<JsonChargingPoint> JsonChargingPoints=new ArrayList<>();
 		JsonChargingPoint jcp=new JsonChargingPoint ();
@@ -145,7 +150,7 @@ public class JsonLayout {
 		 String json = gson.toJson(jsonLayout);
 		 
 		 
-		 File file=new File("layoutElements.json");
+		 File file=new File("floorplan2.json");
 		 
 		 
 		 

@@ -22,16 +22,8 @@ public class Door implements Element{
 
 	public void openDoor() {
 		// TODO Auto-generated method stub
-		open=!open;
+		open=true;
 		
-	}
-
-
-
-	@Override
-	public boolean cleanable() {
-		// TODO Auto-generated method stub
-		return false;
 	}
 	
 	

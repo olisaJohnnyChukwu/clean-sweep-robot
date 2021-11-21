@@ -1,0 +1,122 @@
+{
+  "walls": [
+    {
+      "point1": {
+        "x": 0,
+        "y": 0
+      },
+      "point2": {
+        "x": 0,
+        "y": 3
+      },
+      "point3": {
+        "x": 3,
+        "y": 3
+      },
+      "point4": {
+        "x": 3,
+        "y": 0
+      }
+    },
+    {
+      "point1": {
+        "x": 5,
+        "y": 5
+      },
+      "point2": {
+        "x": 5,
+        "y": 9
+      },
+      "point3": {
+        "x": 9,
+        "y": 9
+      },
+      "point4": {
+        "x": 9,
+        "y": 5
+      }
+    }
+  ],
+  "door": [
+    {
+      "point1": {
+        "x": 3,
+        "y": 1
+      },
+      "open": true
+    },
+    {
+      "point1": {
+        "x": 6,
+        "y": 5
+      },
+      "open": false
+    }
+  ],
+  "stair": [
+    {
+      "point": {
+        "x": 5,
+        "y": 9
+      }
+    }
+  ],
+  "tile": [
+    {
+      "TileType": "Highpile",
+      "point1": {
+        "x": 0,
+        "y": 0
+      },
+      "point2": {
+        "x": 0,
+        "y": 3
+      },
+      "point3": {
+        "x": 3,
+        "y": 3
+      },
+      "point4": {
+        "x": 3,
+        "y": 0
+      }
+    },
+    {
+      "TileType": "Lowpile",
+      "point1": {
+        "x": 5,
+        "y": 5
+      },
+      "point2": {
+        "x": 5,
+        "y": 9
+      },
+      "point3": {
+        "x": 9,
+        "y": 9
+      },
+      "point4": {
+        "x": 9,
+        "y": 5
+      }
+    }
+  ],
+  "chargingPoint": [
+    {
+      "point": {
+        "x": 0,
+        "y": 7
+      }
+    },
+    {
+      "point": {
+        "x": 9,
+        "y": 7
+      }
+    }
+  ],
+  "startingPoint": {
+    "x": 0,
+    "y": 5
+  }
+}
